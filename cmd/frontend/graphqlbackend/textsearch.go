@@ -479,7 +479,7 @@ func zoektSearchHEAD(ctx context.Context, query *search.PatternInfo, repos []*se
 	repoMap := make(map[api.RepoName]*search.RepositoryRevisions, len(repos))
 	for _, repoRev := range repos {
 		repoSet.Set[string(repoRev.Repo.Name)] = true
-		repoMap[api.RepoName(strings.ToLower(string(repoRev.Repo.Name)))] = repoRev
+		repoMap[repoRev.Repo.Name] = repoRev
 	}
 
 	queryExceptRepos, err := queryToZoektQuery(query)
@@ -607,7 +607,7 @@ func zoektSearchHEAD(ctx context.Context, query *search.PatternInfo, repos []*se
 				})
 			}
 		}
-		repoRev := repoMap[api.RepoName(strings.ToLower(string(file.Repository)))]
+		repoRev := repoMap[api.RepoName(file.Repository)]
 		matches[i] = &fileMatchResolver{
 			JPath:        file.FileName,
 			JLineMatches: lines,
