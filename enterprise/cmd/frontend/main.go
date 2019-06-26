@@ -11,6 +11,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -32,6 +33,8 @@ import (
 )
 
 func main() {
+	runtime.SetMutexProfileFraction(5)
+
 	initLicensing()
 	initAuthz()
 
