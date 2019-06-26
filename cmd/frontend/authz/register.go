@@ -45,8 +45,8 @@ func GetProviders() (authzAllowByDefault bool, providers []Provider) {
 	if !isTest {
 		<-authzProvidersReady
 	}
-	authzMu.Lock()
-	defer authzMu.Unlock()
+	authzMu.RLock()
+	defer authzMu.RUnlock()
 
 	if authzProviders == nil {
 		return allowAccessByDefault, nil
