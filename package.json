@@ -232,7 +232,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-stripe-elements": "^3.0.0",
-    "react-visibility-sensor": "^5.0.2",
+    "react-visibility-sensor": "^5.1.0",
     "reactstrap": "^8.0.0",
     "regenerator-runtime": "^0.13.2",
     "rxjs": "^6.5.2",
