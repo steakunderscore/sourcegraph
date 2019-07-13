@@ -16,7 +16,7 @@
     "lsif-protocol": "0.4.0",
     "move-file": "^1.2.0",
     "mz": "^2.7.0",
-    "semver": "^6.0.0",
+    "semver": "^6.2.0",
     "tmp-promise": "^2.0.2",
     "vscode-languageserver": "^5.2.1",
     "vscode-uri": "^2.0.2"
